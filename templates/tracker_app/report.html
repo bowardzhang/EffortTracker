@@ -1,0 +1,50 @@
+{% extends 'tracker_app/base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+<body class="{% block body_class %}nonlogin{% endblock %}">
+  <script type="text/javascript" src="{% static "js/jspdf.debug.js"%}">
+  </script>
+
+<div class="container">
+  <h6>{{v_firstname}} {{v_lastname}}, Please select period to be generated</h6>
+
+  <div class="date-class">
+    <label>Period From</label>
+    <label>Period To</label>
+  </div>
+  <div class="report-options">
+    <input type="date" id="fromperiod" name="fromperiod" value="">
+    <input type="date" id="toperiod" name="fromperiod" value="">
+
+    <input type="button" id="generateBtn" class="btn btn-primary" name="generate" value="Generate Report" style="display:none;">
+    <!-- <input type="button" id="downloadBtn" class="btn btn-primary" name="download" value="Download Report" style="display:none;" data-toggle="popover" data-placement="bottom" title='<ul><li><a href="#">PDF</a></li><li><a href="#">Excel</a></li><li><a href="#">MS Word</a></li></ul>'> -->
+    <!-- Example single danger button -->
+    <div class="btn-group dropbottom" id="downloadBtn" style="display:none;">
+    <input type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="download" value="Download Report">
+
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#" onclick="Export2PDF('report-template');">PDF</a>
+        <a class="dropdown-item" href="#" onclick="Export2Doc('report-template');">MS Word</a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+      <div class="report-frame">
+        <iframe class="awindow" name="awindow" id="awindow" style="display:None;" frameborder=2 src="/tracker_app/reporttemplate/"></iframe>
+      </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

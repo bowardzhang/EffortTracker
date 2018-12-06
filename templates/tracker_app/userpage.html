@@ -1,0 +1,29 @@
+{% extends 'tracker_app/base.html' %}
+
+{% block body_block %}
+<body class="{% block body_class %}nonlogin{% endblock %}">
+
+<div class="container">
+  <div class="jumbotron home-page">
+    <h6>Welcome {{v_firstname}} {{v_lastname}}</h6>
+    <p style="display:none;" >
+      <h6 id="alert" ></h6>
+    </p>
+
+  </div>
+
+<div id="effort-form">
+   <!-- <form> -->
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input id="record-submit" type="button" class="btn btn-primary" name="" value="Record Effort ">
+    <input id="cancelEntry" type="button" class="btn btn-primary" name="" value="Cancel">
+
+  <!-- </form> -->
+
+</div>
+
+</div>
+
+{% endblock %}

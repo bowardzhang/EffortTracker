@@ -1,0 +1,49 @@
+{% extends 'tracker_app/base.html' %}
+{% block body_block %}
+<body class="{% block body_class %}nonlogin{% endblock %}">
+<div class="container">
+    <h6>{{v_firstname}} {{v_lastname}} ,Please select dates to view your effort history</h6>
+    <div class="date-staff">
+        <div class="date-class">
+          <label>From date</label>
+          <label>To date</label>
+        </div>
+        {% if is_superuser%}
+        <div class="staff-class">
+          <label>Staff Name</label>
+        </div>
+         {% endif %}
+    </div>
+
+    <div class="view_input">
+      <div class="input-class">
+        <input type="date" id="fromdate" name="fromdate" value="">
+        <input type="date" id="todate" name="todate" value="">
+      </div>
+        {% if is_superuser%}
+      <div class="input-staff">
+        {{user_list.user_name}}
+      </div>
+    {% endif %}
+
+    </div>
+
+
+      <div class="button">
+
+                <span id="show-span" tabindex="0" data-toggle="tooltip" title="Please select date range">
+                  <input type="button" id="show" class="btn btn-primary" name="Search" value="Show" style="pointer-events: none;" disabled>
+                </span>
+
+                <input type="button" id="show-all" class="btn btn-primary" name="Search" value="Show All">
+
+      </div>
+
+    <p class="p-search">Search Results:</p>
+      <div id="usercontainer">
+
+    </div>
+
+</div>
+
+{% endblock %}

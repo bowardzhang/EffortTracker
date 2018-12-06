@@ -1,0 +1,35 @@
+{% extends 'tracker_app/base.html' %}
+{% block body_block %}
+    <div class="container success-page">
+      {% if registered %}
+          <h1 style="font-weight:900px;font-size:52px;color:#0c0e0ccc;">Successfully Registered</h1>
+      {%else%}
+
+    <h3 style="font-weight:500px;font-size:35px;color:#0c0e0ccc;">Please enter your registration details</h3>
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="">
+        {{user_form.first_name}}
+        {{user_form.last_name}}
+      </div>
+      <div class="">
+        {{user_form.username}}
+      </div>
+      <div class="">
+        {{user_form.password}}
+      </div>
+      <div class="">
+        <input type="password" id="confirm-pass" data-toggle="tooltip" title="Re-enter your password" name="confirm" value="" placeholder="Confirm Password">
+        <!-- <span id="confirm-password-alert"></span> -->
+      </div>
+
+      <input id="Register" class="btn btn-primary" type="submit" name="Register" value="Register" disabled>
+
+    </form>
+
+    </div>
+    {%endif %}
+
+
+{% endblock %}

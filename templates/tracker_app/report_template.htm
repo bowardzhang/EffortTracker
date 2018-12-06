@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static "css/mystyle.css"%}">
+  </head>
+  <body class="report-class">
+    <div class="report-template">
+
+            <h2>WEEKLY PROGRESS REPORT</h2>
+            <table style="border-collapse:collapse;">
+              <tr>
+                <td style="border: 1px solid black;padding:2px 5px;">Name:</td>
+                <td style="border: 1px solid black;padding:2px 5px;">{{v_firstname}} {{v_lastname}}</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black;padding:2px 5px;">Designation:</td>
+                <td style="border: 1px solid black;padding:2px 5px;">Test Engineer</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black;padding:2px 5px;">Section:</td>
+                <td style="border: 1px solid black;padding:2px 5px;">Fare Systems</td>
+              </tr>
+              <tr >
+                <td style="border: 1px solid black;padding:2px 5px;">Reporting Period:</td>
+                <td style="border: 1px solid black;padding:2px 5px;" id ="reporting-period"></td>
+
+              </tr>
+
+              <tr>
+                <td style="border: 1px solid black;padding:2px 5px;">Reporting Officer:</td>
+                <td style="border: 1px solid black;padding:2px 5px;">Sukalpa Raghukumar</td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid black;padding:2px 5px;">Leave(s) Taken During
+        Reporting Period:</td>
+                <td style="border: 1px solid black;padding:2px 5px;">None</td>
+              </tr>
+
+            </table>
+
+        <h3>A.	ACHIEVEMENTS IN THE REPORTING WEEK </h3>
+        <table style="border-collapse: collapse;" id="effort-table">
+
+          <thead>
+            <td style="border: 1px solid black;padding:2px 5px;">Dates</td>
+            <td style="border: 1px solid black;padding:2px 5px;">Project Name</td>
+            <td style="border: 1px solid black;padding:2px 5px;">task Name</td>
+            <td style="border: 1px solid black;padding:2px 5px;">Work Done</td>
+            <td style="border: 1px solid black;padding:2px 5px;">Worked Hours</td>
+          </thead>
+          <tbody>
+
+          </tbody>
+
+        </table>
+        <h3>B.	ACTION PLAN FOR THE FOLLOWING WEEK</h3>
+        <table style="border-collapse: collapse;">
+          <thead>
+            <td style="border: 1px solid black;padding:2px 5px;">Dates</td>
+            <td style="border: 1px solid black;padding:2px 5px;">Project Name</td>
+            <td style="border: 1px solid black;padding:2px 5px;">Task Name</td>
+            <td style="border: 1px solid black;padding:2px 5px;">Work to be done</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid black;width:120px;height:50px;"></td>
+              <td style="border: 1px solid black;width:120px;height:50px;"></td>
+              <td style="border: 1px solid black;width:120px;height:50px;"></td>
+              <td style="border: 1px solid black;width:120px;height:50px;"></td>
+  </tr>
+          </tbody>
+
+
+        </table>
+        <h3>PROBLEMS ENCOUNTERED / INTERESTING FINDINGS</h3>
+          <ul>
+            <li>NIL</li>
+          </ul>
+        <h3>C.	OTHER ISSUES </h3>
+        <ul>
+          <li>NIL</li>
+        </ul>
+    </div>
+
+  </body>
+
+</html>

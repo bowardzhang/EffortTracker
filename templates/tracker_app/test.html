@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Effort Tracker</title>
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_appC:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/bootstrap.css">
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/css/style.css">
+
+
+  </head>
+  <body>
+    <table id="usertable" class="table table-striped"><thead class="thead-dark"><tr><th scope="col">Action</th><th scope="col">Project</th><th scope="col">Task</th><th scope="col">Work done</th><th scope="col">Date</th><th scope="col">Hours Worked</th><th scope="col">Problems faced</th></tr></thead><tbody><tr scope="row"><td><span onclick="deleterow(this.id)" id="11" class="badge badge-dark">Delete</span></td><td>Full ABT</td><td>BS32 Phase 2 UAT</td><td>SIT transaction Generation</td><td>2018-01-01</td><td>4.0</td><td>asssd</td></tr><tr scope="row"><td><span onclick="deleterow(this.id)" id="15" class="badge badge-dark">Delete</span></td><td>ABT phase2</td><td>asas</td><td>mn,m,,</td><td>2018-02-01</td><td>7.0</td><td>hkljljl</td></tr><tr scope="row"><td><span onclick="deleterow(this.id)" id="19" class="badge badge-dark">Delete</span></td><td>ABT Phase 1</td><td>SIT</td><td>Transaction generation</td><td>2018-07-17</td><td>4.0</td><td>No one has knowledge on modules</td></tr><tr scope="row"><td><span onclick="deleterow(this.id)" id="21" class="badge badge-dark">Delete</span></td><td>Full ABT</td><td>BS32 Phase 2 UAT</td><td>blk 674 hougang</td><td>2018-07-04</td><td>6.0</td><td>asasas</td></tr><tr scope="row"><td><span onclick="deleterow(this.id)" id="23" class="badge badge-dark">Delete</span></td><td>Full ABT</td><td>dsad</td><td>sadsad</td><td>2018-07-04</td><td>6.0</td><td>sdad</td></tr></tbody></table>
+  </body>
+  <script type="text/javascript" src="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/js/jquery-3.3.1.min.js">
+    </script>
+    <script type="text/javascript" src="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/js/jquery.dataTables.min.js">
+    </script>
+    <script type="text/javascript" src="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/js/bootstrap.bundle.js">
+    </script>
+    <script type="text/javascript" src="C:/Users/DELL/Desktop/Jameer/Python/Web%20development/Djangofiles/basic_app/static/js/main.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#usertable').DataTable();
+    });
+</script>
+</html>
